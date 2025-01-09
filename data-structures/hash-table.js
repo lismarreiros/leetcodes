@@ -24,3 +24,21 @@ to construct a hash table:
  the dictionary you want to represent
  a way to decide which index of the array you want to use for each key value pair
 */
+
+// first recurring character problem
+// https://www.youtube.com/watch?v=GJdiM-muYqc&t=0s
+
+// "DBCABA" -> return B
+
+function firstRecurring(string) {
+  let count = {} // dictionary or hash table
+  for (char of string) {
+    if (count[char] !== undefined) {
+      return char
+    }
+    count[char] = 1
+  }
+  return null
+}
+
+console.log(firstRecurring('DBCABA'))
